@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Calculado de Desconto</h2>
+        <input type="number" id="preco" placeholder="Digite o preço">
+        <button onclick="mostrarDesconto10()">Aplicar 10%</button>
+        <button onclick="mostrarDesconto25()">Aplicar 25%</button>
+        <div id="resultado"></div>
+    </div>
+
+    <script>
+        function calcularDesconto(preco, desconto) {
+            return preco - ((preco/100) * desconto)
+        }
+
+        function mostrarDesconto10() {
+            let desconto = 10
+            let precoOriginal = document.getElementById("preco").value
+            let precoDesconto = calcularDesconto(precoOriginal, desconto)
+            console.log (precoDesconto)
+        }
+
+        function mostrarDesconto25() {
+            let desconto = 25
+            let precoOriginal = document.getElementById("preco").value
+            let precoDesconto = calcularDesconto(precoOriginal, desconto)
+            console.log (precoDesconto)
+        }
+    </script>
+</body>
+</html>
